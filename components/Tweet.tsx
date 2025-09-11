@@ -3,6 +3,7 @@
 import { useMutation } from "convex/react";
 import { api } from "../convex/_generated/api";
 import { Id } from "../convex/_generated/dataModel";
+import { MessageCircle, Repeat2, Heart, BarChart3 } from "lucide-react";
 
 interface TweetProps {
   tweet: {
@@ -63,7 +64,7 @@ export default function Tweet({ tweet }: TweetProps) {
           </p>
           <div className="flex gap-8 text-gray-400">
             <button className="flex items-center gap-2 hover:text-gray-200">
-              💬 {tweet.stats?.replies ?? 0}
+              <MessageCircle className="h-5 w-5" /> {tweet.stats?.replies ?? 0}
             </button>
             <button
               onClick={handleRetweet}
@@ -71,7 +72,7 @@ export default function Tweet({ tweet }: TweetProps) {
                 tweet.viewer?.retweeted ? "text-white" : ""
               }`}
             >
-              🔄 {tweet.stats?.retweets ?? 0}
+              <Repeat2 className="h-5 w-5" /> {tweet.stats?.retweets ?? 0}
             </button>
             <button
               onClick={handleLike}
@@ -79,10 +80,10 @@ export default function Tweet({ tweet }: TweetProps) {
                 tweet.viewer?.liked ? "text-white" : ""
               }`}
             >
-              ❤️ {tweet.stats?.likes ?? 0}
+              <Heart className="h-5 w-5" /> {tweet.stats?.likes ?? 0}
             </button>
             <button className="flex items-center gap-2 hover:text-gray-200">
-              📊
+              <BarChart3 className="h-5 w-5" />
             </button>
           </div>
         </div>

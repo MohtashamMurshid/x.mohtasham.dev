@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useMutation } from "convex/react";
 import { api } from "../convex/_generated/api";
+import { Image as ImageIcon, BarChart3 } from "lucide-react";
 
 export default function TweetComposer() {
   const [content, setContent] = useState("");
@@ -34,13 +35,13 @@ export default function TweetComposer() {
                 type="button"
                 className="p-2 hover:bg-white/5 rounded-full"
               >
-                📷
+                <ImageIcon className="h-5 w-5" />
               </button>
               <button
                 type="button"
                 className="p-2 hover:bg-white/5 rounded-full"
               >
-                📊
+                <BarChart3 className="h-5 w-5" />
               </button>
             </div>
             <button
