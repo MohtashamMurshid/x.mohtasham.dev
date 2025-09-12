@@ -2,15 +2,12 @@
 
 import { useConvexAuth } from "convex/react";
 import Link from "next/link";
-import SignOutButton from "@/components/SignOutButton";
+import Header from "@/components/header";
 
 export default function Home() {
   return (
     <>
-      <header className="sticky top-0 z-10 bg-black text-white p-4 border-b border-gray-800 flex flex-row justify-between items-center font-mono">
-        <h1 className="text-xl font-bold tracking-tight">[X]•clone</h1>
-        <SignOutButton />
-      </header>
+      <Header />
       <main className="min-h-[calc(100vh-64px)] bg-black text-white font-mono flex items-center justify-center px-6">
         <section className="max-w-3xl w-full text-center space-y-8">
           <div className="space-y-4">

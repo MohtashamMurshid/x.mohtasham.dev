@@ -1,6 +1,6 @@
 "use client";
 
-import SignOutButton from "@/components/SignOutButton";
+import Header from "@/components/header";
 import Sidebar from "@/components/Sidebar";
 import ProfileSetup from "@/components/ProfileSetup";
 import UsersList from "@/components/UsersList";
@@ -8,13 +8,8 @@ import UsersList from "@/components/UsersList";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <main className="min-h-screen bg-black text-white font-mono">
-      <header className="sticky top-0 z-10 bg-black text-white p-4 border-b border-gray-800">
-        <div className="max-w-7xl mx-auto flex flex-row justify-between items-center">
-          <h1 className="text-xl font-bold tracking-tight">[X]•clone</h1>
-          <SignOutButton />
-        </div>
-      </header>
-      <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-[250px_minmax(0,1fr)_320px] gap-6">
+      <Header />
+      <div className="mx-auto p-4 py-6 grid grid-cols-1 md:grid-cols-[250px_minmax(0,1fr)_320px] gap-6">
         <Sidebar />
         {children}
         <aside className="hidden md:block space-y-4 h-max sticky top-[72px] self-start">
